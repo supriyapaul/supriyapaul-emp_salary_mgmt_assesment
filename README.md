@@ -43,3 +43,10 @@ E. Request & Response Handling:
 ------------------------------
     1. Standart Base Request DTO format created. All Request DTO class must extends this base request DTO.
     2. Standart Response format created.
+
+F. Suggestion for improvement:
+-----------------------------
+    1. Validation Framework can be enhanced with more operations to make it more generic.
+    2. More Filters can be added to make more efficient.
+    3. We can provide Validation data in  XML based configuration in order to decouple this from build pacakge so that change in XML configuration will
+       not trigger new build to incorporate the changes.

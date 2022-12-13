@@ -29,6 +29,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.proj.test.salarymanagement.utils.Constants.CODE_201;
+import static com.proj.test.salarymanagement.utils.Constants.DEFAULT_PAGE_SIZE;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -99,7 +100,7 @@ public class UserServiceImpl implements UserService {
         final List<ValidationRule> validationRules = ruleHelper.getRules("fetch");
         final ValidationService validationService = factory.getService("search");
         validationService.validate(searchRequestDto,validationRules);
-        final Pageable pageable = PageRequest.of(searchRequestDto.getOffset(), searchRequestDto.getLimit() == 0 ? 10 : searchRequestDto.getLimit(),
+        final Pageable pageable = PageRequest.of(searchRequestDto.getOffset(), searchRequestDto.getLimit() == 0 ? DEFAULT_PAGE_SIZE : searchRequestDto.getLimit(),
                                   createSortingCriteria(searchRequestDto.getSortParams()));
         final SearchFilter salaryMinFilter = new SearchFilter("salary","GREATER_THAN_EQUAL",String.valueOf(searchRequestDto.getMinSalary()));
         final SearchFilter salaryMaxFilter = new SearchFilter("salary","LESS_THAN",String.valueOf(searchRequestDto.getMaxSalary()));

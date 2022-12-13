@@ -8,6 +8,8 @@ A. Steps to Build & Run the Application:
   2. Set SDK to 1.8.
   3. Execute maven Goal Clean install to run the test cases build the application.
   4. Run main Application(SalaryManagementApplication.java) to start the server.
+  5. Server will be started at port 8080.We can test the API using Swagger as well.
+     http://localhost:8080/swagger-ui.html
 
 B. Exception Handling:
 ---------------------

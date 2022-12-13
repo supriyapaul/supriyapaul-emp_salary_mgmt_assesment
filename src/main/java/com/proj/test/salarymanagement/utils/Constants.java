@@ -13,4 +13,6 @@ public class Constants {
     public static final String EMPLOYEE_RECORD_SUCCESSFULLY_UPDATED = "Employee record Successfully updated";
     public static final String EMPLOYEE_RECORDS_FETCHED_SUCCESSFULLY = "Employee records fetched successfully";
     public static final String NEW_EMPLOYEE_RECORD_CREATED = "New Employee record created";
+
+    public static final int DEFAULT_PAGE_SIZE = 1000;
 }
